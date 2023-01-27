@@ -1,5 +1,4 @@
-import 'package:first_app/pages/login.dart';
-import 'package:first_app/pages/register.dart';
+import 'package:first_app/screens/body_boarding.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,12 +11,12 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner:false ,
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData( 
+      theme: ThemeData(
         primarySwatch: Colors.indigo,
       ),
-      home: const Login(),
+      home: const BodyBoarding(),
     );
   }
 }
