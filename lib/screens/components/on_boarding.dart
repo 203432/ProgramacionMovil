@@ -1,3 +1,4 @@
+import 'package:first_app/screens/components/content_boarding.dart';
 import 'package:flutter/material.dart';
 
 class OnBoarding extends StatefulWidget {
@@ -10,44 +11,50 @@ class OnBoarding extends StatefulWidget {
 class _OnBoardingState extends State<OnBoarding> {
   int currentePage = 0;
   List<Map<String, String>> listBoarding = [
-    {"titulo": "Cualquier dato :D", "imagen": ""},
-    {"titulo": "Titulo 1", "imagen": ""},
-    {"titulo": "Titulo 2", "imagen": ""},
-    {"titulo": "Titulo 3", "imagen": ""}
+    {
+      "titulo": "BMO",
+      "imagen": "assets/images/bmo.jpg",
+      "descripcion": "ese es bmo"
+    },
+    {
+      "titulo": "Jake",
+      "imagen": "assets/images/jake.jfif",
+      "descripcion": "ese es jake"
+    },
+    {
+      "titulo": "El Chueck",
+      "imagen": "assets/images/shrek.jfif",
+      "descripcion": "shrek"
+    },
   ];
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Column(children: const [
-        Expanded(
-          flex: 2,
-          child: Text(
-            "Flex 2",
-            style: TextStyle(
-              fontSize: 30.0,
+      child: Column(
+        children: [
+          Expanded(
+            flex: 2,
+            child: PageView.builder(
+              itemBuilder: (context, index) => ContentBoarding(
+                text: listBoarding[index]['titulo'],
+                image: listBoarding[index]['imagen'],
+                descripcion: listBoarding[index]['descripcion'],
+              ),
+              itemCount: listBoarding.length,
             ),
           ),
-        ),
-        Expanded(
-          flex: 2,
-          child: Text(
-            "Flex 2",
-            style: TextStyle(
-              fontSize: 30.0,
+          const Expanded(
+            flex: 2,
+            child: Center(
+              child: OutlinedButton(
+                onPressed: null,
+                child: Text('Button'),
+              ),
             ),
           ),
-        ),
-        Expanded(
-          flex: 1,
-          child: Center(
-            child: OutlinedButton(
-              onPressed: null,
-              child: Text('Button'),
-            ),
-          ),
-        ),
-      ]),
+        ],
+      ),
     );
   }
 }
