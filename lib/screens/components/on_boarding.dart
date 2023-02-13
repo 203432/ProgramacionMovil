@@ -1,8 +1,6 @@
 import 'package:first_app/screens/components/content_boarding.dart';
 import 'package:flutter/material.dart';
 
-import '../../pages/login.dart';
-
 class OnBoarding extends StatefulWidget {
   const OnBoarding({super.key});
 
@@ -105,10 +103,7 @@ class _OnBoardingState extends State<OnBoarding> {
                           : Colors.white,
                       onPressed: () async {
                         currentPage == listBoarding.length - 1
-                            ? Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (_) => const Login()))
+                            ? Navigator.pushNamed(context, '/homepage')
                             : varController.nextPage(
                                 duration: const Duration(milliseconds: 500),
                                 curve: Curves.easeInOut);
@@ -138,7 +133,7 @@ class _OnBoardingState extends State<OnBoarding> {
 
 AnimatedContainer pages({required int index, required int currentePage}) {
   return AnimatedContainer(
-    margin: EdgeInsets.only(right: 5),
+    margin:const EdgeInsets.only(right: 5),
     width: currentePage == index ? 25 : 15,
     height: 5,
     duration: kThemeAnimationDuration,
@@ -146,6 +141,6 @@ AnimatedContainer pages({required int index, required int currentePage}) {
         borderRadius: BorderRadius.circular(50),
         color: currentePage == index
             ? Colors.pink
-            : Color.fromARGB(255, 175, 171, 171)),
+            : const Color.fromARGB(255, 175, 171, 171)),
   );
 }

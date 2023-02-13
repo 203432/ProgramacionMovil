@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class Register extends StatelessWidget {
-  const Register({super.key});
+class RecoveryPassword2 extends StatelessWidget {
+  const RecoveryPassword2({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: const Text('Recuperar contraseña'),
         iconTheme: const IconThemeData(color: Colors.pink),
-        title: const Text('Registrate'),
       ),
       body: Center(
         child: Padding(
@@ -28,7 +28,7 @@ class Register extends StatelessWidget {
                         const Padding(
                           padding: EdgeInsets.only(bottom: 50.0),
                           child: Text(
-                            'Crea una cuenta para empezar a usar la app',
+                            'Por seguridad, tu contraseña debe tener una longitud de entre 8 y 15 caracteres, usar mayusculas, minusculas, contener por lo menos un numero y un caracter especial',
                             style: TextStyle(
                                 fontSize: 18,
                                 color: Color.fromARGB(255, 139, 138, 138)),
@@ -37,7 +37,7 @@ class Register extends StatelessWidget {
                         const Align(
                             alignment: Alignment.topLeft,
                             child: Text(
-                              'Nombre',
+                              'Nueva contraseña',
                               style: TextStyle(fontWeight: FontWeight.bold),
                             )),
                         Padding(
@@ -49,14 +49,14 @@ class Register extends StatelessWidget {
                             decoration: InputDecoration(
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10.0)),
-                              hintText: 'Nombre Completo',
+                              hintText: 'Nueva contraseña',
                             ),
                           ),
                         ),
                         const Align(
                             alignment: Alignment.topLeft,
                             child: Text(
-                              'Correo electronico',
+                              'Confirmar nueva contraseña',
                               style: TextStyle(fontWeight: FontWeight.bold),
                             )),
                         Padding(
@@ -68,63 +68,32 @@ class Register extends StatelessWidget {
                             decoration: InputDecoration(
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10.0)),
-                              hintText: 'Direccion de correo',
-                            ),
-                          ),
-                        ),
-                        const Align(
-                            alignment: Alignment.topLeft,
-                            child: Text(
-                              'Contraseña',
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )),
-                        Padding(
-                          padding: const EdgeInsets.only(
-                            bottom: 20,
-                            top: 10,
-                          ),
-                          child: TextField(
-                            decoration: InputDecoration(
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10.0)),
-                              hintText: 'Contraseña',
+                              hintText: 'Confirmar nueva contraseña',
                             ),
                           ),
                         ),
                         const Text(
-                          'La contraseña debe contener caracteres, numeros y simbolos con un minimo de 6 caracteres',
+                          'Ingrese su correo electronico  registrado y le enviaremos un correo electronico que contiene un enlace para restablecer su contraseña',
                           style: TextStyle(fontSize: 13.0, color: Colors.grey),
                         ),
-                        ListTile(
-                          title: const Text(
-                            'Al registrarme, acepto los terminos y condiciones y la politica de privacidad',
-                            style: TextStyle(fontSize: 12.0),
-                          ),
-                          leading: Radio(
-                            value: "valor",
-                            groupValue: "grupo",
-                            onChanged: (value) {
-                         
+                        Padding(
+                          padding: const EdgeInsets.only(top: 250.0),
+                          child: MaterialButton(
+                            minWidth: 400,
+                            height: 50,
+                            color: Colors.green,
+                            onPressed: () async {
+                              Navigator.pushNamed(context, '/homepage');
                             },
+                            textColor: Colors.white,
+                            shape: RoundedRectangleBorder(
+                                side: const BorderSide(
+                                    width: 1, color: Colors.grey),
+                                borderRadius: BorderRadius.circular(40)),
+                            child: const Text('Actualizar contraseña',
+                                style: TextStyle(fontSize: 16)),
                           ),
                         ),
-                        MaterialButton(
-                          color: Colors.green,
-                          onPressed: () async {
-                            Navigator.pushNamed(context, '/recovery');
-                          },
-                          textColor: Colors.white,
-                          shape: RoundedRectangleBorder(
-                              side: const BorderSide(
-                                  width: 1, color: Colors.white),
-                              borderRadius: BorderRadius.circular(20)),
-                          child: const Text("Crear Cuenta",
-                              style: TextStyle(fontSize: 16)),
-                        ),
-                        const Padding(
-                          padding: EdgeInsets.only(top: 20.0),
-                          child: Text('¿Ya tienes cuenta? Iniciar Sesion'),
-                        )
                       ],
                     ),
                   ),
