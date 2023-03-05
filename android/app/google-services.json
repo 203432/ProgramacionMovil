@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "959139461966",
+    "project_id": "i-woodland-358920",
+    "storage_bucket": "i-woodland-358920.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:959139461966:android:c76a963cd68191e65cfc1f",
+        "android_client_info": {
+          "package_name": "com.jorge.first_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "959139461966-232dcek1394qe48fq8r6f26u14p9qvuv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jorge.first_app",
+            "certificate_hash": "4e3e9b0e2875b5ff137b151aa4a8151376c495b0"
+          }
+        },
+        {
+          "client_id": "959139461966-7f0f3s81k7foe2h28gk102kqtnmrbmcd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtcGuuQDcrHsxN2XS-zePYdQAGGmhYQCc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "959139461966-7f0f3s81k7foe2h28gk102kqtnmrbmcd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "959139461966-mrnh3thjm958oduih7s1l4irihj32aqc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.firstApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

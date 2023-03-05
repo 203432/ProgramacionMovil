@@ -1,4 +1,4 @@
-import 'package:first_app/screens/components/content_boarding.dart';
+import 'package:first_app/screens/components/on_boarding/content_boarding.dart';
 import 'package:flutter/material.dart';
 
 class OnBoarding extends StatefulWidget {
@@ -103,7 +103,7 @@ class _OnBoardingState extends State<OnBoarding> {
                           : Colors.white,
                       onPressed: () async {
                         currentPage == listBoarding.length - 1
-                            ? Navigator.pushNamed(context, '/homepage')
+                            ? Navigator.pushReplacementNamed(context, '/verificar')
                             : varController.nextPage(
                                 duration: const Duration(milliseconds: 500),
                                 curve: Curves.easeInOut);

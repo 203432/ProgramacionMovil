@@ -81,9 +81,10 @@ class RecoveryPassword2 extends StatelessWidget {
                           child: MaterialButton(
                             minWidth: 400,
                             height: 50,
-                            color: Colors.green,
+                            color: const Color.fromARGB(255, 121, 171, 65),
                             onPressed: () async {
-                              Navigator.pushNamed(context, '/homepage');
+                              Navigator.pushReplacementNamed(
+                                  context, '/homepage');
                             },
                             textColor: Colors.white,
                             shape: RoundedRectangleBorder(

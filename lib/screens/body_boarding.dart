@@ -1,4 +1,4 @@
-import 'package:first_app/screens/components/on_boarding.dart';
+import 'package:first_app/screens/components/on_boarding/on_boarding.dart';
 import 'package:flutter/material.dart';
 
 class BodyBoarding extends StatefulWidget {

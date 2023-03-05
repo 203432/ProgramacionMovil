@@ -37,7 +37,7 @@ class RecoveryPassword extends StatelessWidget {
                         const Align(
                             alignment: Alignment.topLeft,
                             child: Text(
-                              'Nombre',
+                              'Correo Electronico',
                               style: TextStyle(fontWeight: FontWeight.bold),
                             )),
                         Padding(
@@ -49,7 +49,7 @@ class RecoveryPassword extends StatelessWidget {
                             decoration: InputDecoration(
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10.0)),
-                              hintText: 'Nombre Completo',
+                              hintText: 'Direccion de correo',
                             ),
                           ),
                         ),
@@ -62,7 +62,7 @@ class RecoveryPassword extends StatelessWidget {
                           child: MaterialButton(
                             minWidth: 400,
                             height: 50,
-                            color: Colors.green,
+                            color: const Color.fromARGB(255, 121, 171, 65),
                             onPressed: () async {
                               Navigator.pushNamed(context, '/recovery2');
                             },
